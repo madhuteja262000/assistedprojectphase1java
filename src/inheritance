@@ -1,0 +1,55 @@
+Demonstrate types of inheritance
+a)	Single Inheritance:
+In Single Inheritance, one class extends another class (one class only).
+Class A{
+   public void methodA()
+   {
+     System.out.println("Base class method");
+   }}
+
+b)	Multiple Inheritance:
+In Multiple Inheritance, one class extends more than one class. Java does not support multiple inheritance.
+Class B extends A{
+   public void methodB()
+   {
+     System.out.println("Child class method");
+   }
+   public static void main(String args[])
+   {
+     B obj = new B();
+     obj.methodA(); //calling super class method
+     obj.methodB(); //calling local method
+  }
+}
+
+c)	Multi-level Inheritance:
+In Multi-level Inheritance, one class can inherit properties from a derived class. Hence, the derived class becomes the base class for the new class.
+Class X{
+   public void methodX()
+   {
+     System.out.println("Class X method");
+   }
+}
+Class Y extends X{
+	public void methodY(){
+	System.out.println("class Y method");
+}
+}
+Class Z extends Y{
+   public void methodZ()
+   {
+     System.out.println("class Z method");
+   }
+   public static void main(String args[])
+   {
+     Z obj = new Z();
+     obj.methodX(); //calling grand parent class method
+     obj.methodY(); //calling parent class method
+     obj.methodZ(); //calling local method
+  }
+}
+d)	Hierarchical Inheritance:
+In Hierarchical Inheritance, one class is inherited by many sub classes.
+e)	Hybrid Inheritance:
+Hybrid inheritance is a combination of single and multiple inheritance.
+

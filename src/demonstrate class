@@ -1,0 +1,43 @@
+1. Createing a class?
+●	A class is a blueprint from which individual objects are created.
+  ex public class Dog {
+   String breed;
+   int age;
+   String color;
+
+   void barking() {
+   }
+   void hungry() {
+   }
+
+   void sleeping() {
+   }}
+
+
+2.Creating a object?
+  ●	If we consider the real world, we can find many objects around us, such as cars, dogs, humans, and so on. All these objects have a state and behavior.
+●	If we consider a dog, then its state is: name, breed, color, and the behavior is: barking, wagging the tail, and running.
+●	If you compare the software object with a real-world object, they have very similar characteristics.
+●	Software objects also have a state and behavior. A software object's state is stored in fields and behavior is shown via methods.
+public class Puppy {
+   public Puppy(String name) {
+      // This constructor has one parameter, name.
+      System.out.println("Passed Name is :" + name );
+   }
+
+   public static void main(String []args) {
+      // Following statement would create an object myPuppy
+      Puppy myPuppy = new Puppy( "tommy" );
+   }}
+
+
+3.Creating a constructor
+  ●	When discussing about classes, one of the most important subtopics would be constructors. Every class has a constructor. If we do not explicitly write a constructor for a class, the Java compiler builds a default constructor for that class.
+●	Each time a new object is created, at least one constructor will be invoked. The main rule of constructors is that they should have the same name as the class. A class can have more than one constructor.
+public class Puppy {
+   public Puppy() {
+   }
+
+   public Puppy(String name) {
+      // This constructor has one parameter, name.
+   }}
